@@ -1,0 +1,75 @@
+\documentclass[9pt]{article}
+\newif\ifsmall \smallfalse
+\ifsmall
+  \usepackage[a6paper,hmargin=3.9cm,vmargin=2cm]{geometry}
+\else
+  \usepackage[a5paper,hmargin=3.9cm,vmargin=2cm]{geometry}
+\fi
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{pgfornament}
+\usepackage{ebgaramond}
+\input GoudyIn.fd
+\newcommand*\initfamily{\usefont{U}{GoudyIn}{xl}{n}}
+%\input Acorn.fd
+%\newcommand*\initfamily{\usefont{U}{Acorn}{xl}{n}}
+\usepackage{wallpaper}
+
+\pagestyle{empty}
+\setlength\parindent{0pt}
+\ifsmall\setlength\parskip{2mm}\else\setlength\parskip{4mm}\fi
+
+\newcommand{\mono}[1]{{\tt\ifsmall\scriptsize\else\normalsize\fi #1}}
+\newcommand{\h}[1]{\textcolor{red!55!black}{#1}}
+
+%% ---
+\begin{document}
+
+% add wallpaper
+\CenterWallPaper{1}{u61}
+
+\mbox{}
+
+% title
+\begin{center}
+  \ifsmall\normalsize\else\LARGE\fi\ebgaramond
+  {\Huge {\textsc{\h{S}elamat \h{N}atal\\2021}}}\\[2pt]
+  \begin{tikzpicture}
+    \pgfornament[width = 2cm,color = red!55!black]{79}
+  \end{tikzpicture}
+\end{center}
+
+% body
+\ifsmall\footnotesize\else\large\fi
+\smallskip
+
+\begin{center}
+Bersama ini kami sekeluarga,
+\end{center}
+\begin{center}
+%{\Large {\textsc{\h{M}onica \h{W}idjasmara}}}\\
+\textsc{{\huge \h{M}}{\Large onica} {\huge \h{W}}{\Large idjasmara}}\\
+{\Large {\textsc{\h{\&}}}}\\
+%{\Large {\textsc{\h{H}oward \h{S}etyamukti}}}
+\textsc{{\huge \h{H}}{\Large oward} {\huge \h{S}}{\Large etyamukti}}\\
+\end{center}
+\smallskip
+
+mengucapkan Selamat Natal 2021. 
+Semoga perayaan di penghujung tahun ini membawa kita semua ke tahun 
+depan dengan pengharapan dan semangat untuk menghadapi berbagai
+tantangan yang ada. 
+
+Tidak lupa kami mohonkan pula cinta kasih dan damai yang sepenuhnya,
+baik di dalam hati masing-masing pribadi maupun di muka bumi ini.
+
+%Terima kasih ya mammie atas bimbingan dan dukungan untuk kami berdua.
+%Love you so much! 
+
+%signature
+\normalfont\initfamily
+\fontsize{12mm}{12mm}\selectfont \h{MW} \hfill \h{HS}
+
+\vfill
+
+\end{document}
