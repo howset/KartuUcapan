@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage[svgnames]{xcolor}
+\definecolor{background}{RGB}{239,234,210}
+\usepackage{pgfornament}
+\usepackage{background}
+\usepackage[vmargin=3.5cm,hmargin=1.5cm,paperwidth=10.5cm,paperheight=14.9cm]{geometry}
+\usepackage{wallpaper}
+\usepackage{calligra}
+\usepackage[T1]{fontenc}
+\backgroundsetup{
+scale=1,
+opacity=1,
+angle=0,
+color=black,
+contents={}
+}
+
+\begin{document}
+
+\pagecolor{background}
+\pagenumbering{gobble}
+\CenterWallPaper{1}{pngegg5}
+\newcommand{\h}[1]{\textcolor{red!70!black}{#1}}
+\newcommand{\g}[1]{\textcolor{brown!60!black}{#1}}
+
+% picture
+\begin{center}
+\vspace*{-0.5cm}
+\includegraphics[height = 3cm]{msan}
+\end{center}
+
+% title
+\begin{center}
+\vspace*{-0.5cm}
+  \textcalligra{\huge {\textsc{\h{S}\g{elamat} \h{H}\g{ari} \h{I}\g{bu}\\}}}
+  \textcalligra{\large {\textsc{\g{22} \h{D}\g{esember 2021}\\}}}
+\end{center}
+
+% separator
+\smallskip
+\begin{center}  
+\vspace*{-.8cm}
+  \begin{tikzpicture}
+    \pgfornament[width = 5cm,color = red!55!black]{89}
+  \end{tikzpicture}
+\end{center}
+
+% body
+\smallskip
+\vspace*{-.5cm}
+\begin{center}
+\g{\textcalligra{\large{Selamat Hari Ibu, Mammie!!\\
+\smallskip
+We love you so much.}}  :)}
+\end{center}
+
+\begin{center}
+\g{\textcalligra{\large {\textsc{\h{M}onica \& \h{H}oward}}}}\\
+\end{center}
+\smallskip
+
+\end{document}
