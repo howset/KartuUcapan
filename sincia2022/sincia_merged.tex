@@ -1,0 +1,112 @@
+\documentclass{article}
+
+% page packages
+\usepackage[vmargin=2.5cm,hmargin=1.5cm,paperwidth=10.5cm,paperheight=16.4cm]{geometry}
+\usepackage{pgfpages}
+\usepackage{multicol}
+\usepackage[a4,cam,cross]{crop}
+
+% content packages
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage[object=pgfhan]{pgfornament}
+\usepackage{inconsolata}
+\usepackage{CJKutf8}
+
+% page defs
+\pgfpagesdeclarelayout{christmas}{
+    \edef\pgfpageoptionheight{\the\paperheight}
+    \edef\pgfpageoptionwidth{\the\paperwidth}
+    \edef\pgfpageoptionborder{0pt}
+}{  \pgfpagesphysicalpageoptions{
+        logical pages=2, physical height=29.7cm, physical width=21.0cm
+    }\pgfpageslogicalpageoptions{2}{border shrink=\pgfpageoptionborder,
+        resized width=10.5cm, resized height=16.4cm,
+        center=\pgfpoint{.25\pgfphysicalwidth}{.5\pgfphysicalheight}
+    }\pgfpageslogicalpageoptions{1}{border shrink=\pgfpageoptionborder,
+        resized width=10.5cm, resized height=16.4cm,
+        center=\pgfpoint{.75\pgfphysicalwidth}{.5\pgfphysicalheight}
+    }
+}\pgfpagesuselayout{christmas}
+\pagenumbering{gobble}
+
+\begin{document}
+
+%% COVER %%
+% cover border
+\newcommand{\covcorn}{7}
+\newcommand{\cornerorncol}{red!70!black}
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north west] at (current page.north west){\pgfornament[width=1.75cm,color=\cornerorncol]{\covcorn}};
+    \node[anchor=north east] at (current page.north east){\pgfornament[width=1.75cm,color=\cornerorncol,symmetry=v]{\covcorn}};
+    \node[anchor=south west] at (current page.south west){\pgfornament[width=1.75cm,color=\cornerorncol,symmetry=h]{\covcorn}};
+    \node[anchor=south east] at (current page.south east){\pgfornament[width=1.75cm,color=\cornerorncol,symmetry=c]{\covcorn}};
+    \draw [line width=3.8pt,color=\cornerorncol] ($ (current page.north west) + (1.7cm,-1.03cm) $) -- ($ (current page.north east) + (-1.7cm,-1.03cm) $); %top
+    \draw [line width=3.8pt,color=\cornerorncol] ($ (current page.south west) + (1.7cm,1.03cm) $) -- ($ (current page.south east) + (-1.7cm,1.03cm) $); %bottom
+    \draw [line width=3.8pt,color=\cornerorncol] ($ (current page.north west) + (1.03cm,-1.7cm) $) -- ($ (current page.south west) + (1.03cm,1.7cm) $); %left
+    \draw [line width=3.8pt,color=\cornerorncol] ($ (current page.north east) + (-1.03cm,-1.7cm) $) -- ($ (current page.south east) + (-1.03cm,1.7cm) $); %right
+\end{tikzpicture}
+\vfill
+
+\newcommand{\h}[1]{\textcolor{red!70!black}{#1}}
+
+% cover title
+\begin{figure}
+    \vspace{2cm}
+    \centering
+    \includegraphics[width=0.4\textwidth]{macan_612x612}
+\end{figure}
+\newcommand{\chinese}[1]{\begin{CJK}{UTF8}{bsmi}#1\end{CJK}}
+\begin{center}
+    \vspace*{-3cm}
+    \fontsize{40}{60}\selectfont \textsc{\h{\chinese{恭喜發財}}}
+    \vspace*{-0.5cm}
+    \fontsize{18}{60}\selectfont \textsc{\h{\chinese{2022年}}}\\
+    \vfill
+\end{center}
+
+\newpage\restoregeometry 
+\phantom{}\newpage
+
+%% CONTENT %%
+% content border
+\newcommand{\concorn}{23}
+\begin{tikzpicture}[remember picture, overlay]
+   \node[anchor=north west] at (current page.north west){\pgfornament[width=1.75cm,color=\cornerorncol]{\concorn}};
+    \node[anchor=north east] at (current page.north east){\pgfornament[width=1.75cm,color=\cornerorncol,symmetry=v]{\concorn}};
+    \node[anchor=south west] at (current page.south west){\pgfornament[width=1.75cm,color=\cornerorncol,symmetry=h]{\concorn}};
+    \node[anchor=south east] at (current page.south east){\pgfornament[width=1.75cm,color=\cornerorncol,symmetry=c]{\concorn}};
+    \draw [line width=3pt,color=\cornerorncol] ($ (current page.north west) + (1.8cm,-0.39cm) $) -- ($ (current page.north east) + (-1.8cm,-0.39cm) $);
+    \draw [line width=3pt,color=\cornerorncol] ($ (current page.south west) + (1.8cm,0.39cm) $) -- ($ (current page.south east) + (-1.8cm,0.39cm) $);
+    \draw [line width=3pt,color=\cornerorncol] ($ (current page.north west) + (0.39cm,-1.8cm) $) -- ($ (current page.south west) + (0.39cm,1.8cm) $);
+    \draw [line width=3pt,color=\cornerorncol] ($ (current page.north east) + (-0.39cm,-1.8cm) $) -- ($ (current page.south east) + (-0.39cm,1.8cm) $);
+\end{tikzpicture}
+
+% content
+\smallskip
+\begin{center}
+    Bersama ini kami sekeluarga,
+\end{center}
+\begin{center}
+    {\Large {\textsc{\h{M}onica \h{W}idjasmara}}}\\
+    {\Large {\textsc{\h{\&}}}}\\
+    {\Large {\textsc{\h{H}oward \h{S}etyamukti}}}
+\end{center}
+\smallskip
+mengucapkan Selamat Imlek 2022. 
+Semoga tahun macan ini membawa kebahagiaan dan kesuksesan bagi kita semua!\\
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{macan_cisewu} \\
+    \Large{Rawr!!}
+\end{center}
+
+%signature
+\newcommand\signature{
+\noindent\begin{minipage}{2cm}
+    \noindent\vspace{1cm}\par
+    \noindent\rule{2cm}{1pt}\par
+\end{minipage}}
+\signature{}{}\hfill\signature{}{}
+\vfill 
+
+\end{document}
