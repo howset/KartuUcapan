@@ -1,24 +1,15 @@
 \documentclass[9pt]{article}
-\newif\ifsmall \smallfalse
-\ifsmall
-  \usepackage[a6paper,hmargin=3.9cm,vmargin=2cm]{geometry}
-\else
-  \usepackage[a5paper,hmargin=3.9cm,vmargin=2cm]{geometry}
-\fi
+\usepackage[a5paper,hmargin=3.9cm,vmargin=2cm]{geometry}
 \usepackage{tikz}
 \usetikzlibrary{positioning}
 \usepackage{pgfornament}
 \usepackage{ebgaramond}
 \input GoudyIn.fd
 \newcommand*\initfamily{\usefont{U}{GoudyIn}{xl}{n}}
-%\input Acorn.fd
-%\newcommand*\initfamily{\usefont{U}{Acorn}{xl}{n}}
 \usepackage{wallpaper}
-
 \pagestyle{empty}
 \setlength\parindent{0pt}
-\ifsmall\setlength\parskip{2mm}\else\setlength\parskip{4mm}\fi
-
+\setlength\parskip{4mm}
 \newcommand{\mono}[1]{{\tt\ifsmall\scriptsize\else\normalsize\fi #1}}
 \newcommand{\h}[1]{\textcolor{red!55!black}{#1}}
 
@@ -27,12 +18,11 @@
 
 % add wallpaper
 \CenterWallPaper{1}{u61}
-
 \mbox{}
 
 % title
 \begin{center}
-  \ifsmall\normalsize\else\LARGE\fi\ebgaramond
+  \LARGE\ebgaramond
   {\Huge {\textsc{\h{S}elamat \h{N}atal\\2021}}}\\[2pt]
   \begin{tikzpicture}
     \pgfornament[width = 2cm,color = red!55!black]{79}
@@ -40,17 +30,15 @@
 \end{center}
 
 % body
-\ifsmall\footnotesize\else\large\fi
+\large
 \smallskip
 
 \begin{center}
 Bersama ini kami sekeluarga,
 \end{center}
 \begin{center}
-%{\Large {\textsc{\h{M}onica \h{W}idjasmara}}}\\
 \textsc{{\huge \h{M}}{\Large onica} {\huge \h{W}}{\Large idjasmara}}\\
 {\Large {\textsc{\h{\&}}}}\\
-%{\Large {\textsc{\h{H}oward \h{S}etyamukti}}}
 \textsc{{\huge \h{H}}{\Large oward} {\huge \h{S}}{\Large etyamukti}}\\
 \end{center}
 \smallskip
