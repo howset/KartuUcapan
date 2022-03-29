@@ -1,5 +1,5 @@
-# Tahun Baru Hijriyah 2022
+# Lebaran 2022
 
 ![](./ifitri.png)
 
-Islamic new year 1444 H.
+Hari raya lebaran 2022.
