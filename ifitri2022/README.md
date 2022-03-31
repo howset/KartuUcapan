@@ -2,4 +2,4 @@
 
 ![](./ifitri.png)
 
-Hari raya lebaran 2022.
+To greet people who celebrate islamic fasting 2022.
