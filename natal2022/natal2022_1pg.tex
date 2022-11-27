@@ -1,0 +1,66 @@
+\documentclass[9pt]{article}
+
+% layout packages
+\usepackage[left=1.5cm,right=2.5cm,top=1.5cm,bottom=3.5cm,paperwidth=10.5cm,paperheight=15.3cm]{geometry}
+\usepackage{pgfpages}
+
+% content packages
+\usepackage{wallpaper}
+\usepackage{ebgaramond}
+\input GoudyIn.fd
+\newcommand*\initfamily{\usefont{U}{GoudyIn}{xl}{n}}
+\usepackage[T1]{fontenc}
+
+\pagenumbering{gobble}
+\newcommand{\h}[1]{\textcolor{red!70!black}{#1}}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+%% CONTENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% border
+\ThisCenterWallPaper{1}{border_u81_greenbeige}
+
+% flourish
+\begin{figure}
+	\centering
+	\includegraphics[width=0.3\textwidth]{orn_candle}
+\end{figure}
+\smallskip
+
+% title
+\begin{center}
+	\vspace*{-1cm}
+	\LARGE\ebgaramond
+	{\Huge {\textsc{\h{S}elamat \h{N}atal\\2022}}}\\[2pt]
+\end{center}
+
+% words
+\begin{center}
+    Bersama ini kami sekeluarga,
+\end{center}
+
+\begin{center}
+    \textsc{{\huge \h{M}}{\Large o} {\huge \h{W}}{\Large i}}\\
+    {\Large {\textsc{\h{\&}}}}\\[2pt]
+    \textsc{{\huge \h{H}}{\Large o} {\huge \h{S}}{\Large e}}\\
+\end{center}
+
+mengucapkan Selamat Natal 2022. 
+Besar harapan kami agar hati dan pikiran kita semua terus dilimpahi ketenangan, cinta kasih, dan kehangatan.
+
+\medskip
+Salam damai dan sukacita!
+
+% signature
+\smallskip
+\vfill
+\normalfont\initfamily
+\fontsize{10mm}{10mm}\selectfont \h{MW} \hfill \h{HS}
+
+\end{document}
+
+%% SOURCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%- border https://www.fromoldbooks.org/WilliamMorris-KelmscottChaucer/pages/501-Troilus-and-Criseyde-III-the-kiss-outer/
+%- ornament - don't remember, but probably not in the public domain
