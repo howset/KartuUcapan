@@ -1,0 +1,93 @@
+\documentclass[8pt]{article}
+
+% page packages
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,paperwidth=10.5cm,paperheight=16cm]{geometry}
+\usepackage{wallpaper}
+\usepackage{etoolbox}
+\usepackage{lscape}
+    \makeatletter
+    \patchcmd{\LS@rot}{90}{-90}{}{}
+    \patchcmd{\endlandscape}{90}{-90}{}{}
+    \makeatother
+\usepackage{multicol}
+    \setlength{\columnsep}{1cm}
+\usepackage{xcolor}
+    \definecolor{Yel}{HTML}{B1AA60}
+
+% content packages
+\usepackage{ebgaramond}
+    \input GoudyIn.fd
+    \newcommand*\initfamily{\usefont{U}{GoudyIn}{xl}{n}}
+\usepackage[T1]{fontenc}
+\usepackage{CJKutf8}
+
+\pagenumbering{gobble}
+\newcommand{\h}[1]{\textcolor{Yel}{#1}}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+%% CONTENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{landscape}
+    %\ThisCenterWallPaper{0.95}{imgs/screegr} %merah
+    %\ThisCenterWallPaper{0.95}{imgs/screeggr} %abu
+    %\ThisCenterWallPaper{0.95}{imgs/screegb} %biru
+    \ThisCenterWallPaper{0.95}{imgs/screegt} %turquoise
+    
+    \begin{multicols*}{2}
+    \begin{minipage}{\linewidth}
+    \color{white}
+    
+    % title
+    \begin{center}
+        \vspace*{-0.2cm}
+        \LARGE\ebgaramond
+        {\textsc{\h{S}emamet \h{T}aun \h{B}aru 2023}}
+    \end{center}
+    
+    % words
+    \begin{center}
+        Bersama ini kami,
+    \end{center}
+    
+    \begin{center}
+        \textsc{{\large \h{M}}{\Large o} {\huge \h{W}}{\Large i}}
+        {\Large {\textsc{\h{\&}}}}
+        \textsc{{\large \h{H}}{\Large o} {\huge \h{S}}{\Large e}}
+    \end{center}
+    
+    mengucapkan Semamet Taun Baru 2023. 
+    Semoga tahun kilinci nyang baru ini membawa berkah dan anugerah dan membuat kita semua menjadi manusia yang barokah.
+    Amiiiin ya min koman kamin!
+    
+    % signature
+    \medskip
+    \normalfont\initfamily
+    \fontsize{10mm}{10mm}\selectfont \h{MW} \hfill \h{HS}
+    \end{minipage}
+    
+    \columnbreak
+    
+    \begin{minipage}{\linewidth}
+        \vspace*{-0.5cm}
+        \centering
+        \includegraphics[width=0.75\textwidth]{imgs/isto}
+        \newcommand{\chinese}[1]{\begin{CJK}{UTF8}{bsmi}#1\end{CJK}}
+        \begin{center}
+            \vspace*{-1cm}
+            \fontsize{30}{60}\selectfont \textsc{\h{\chinese{恭喜發財}}}\\
+            \vspace*{-1cm}
+            \fontsize{18}{60}\selectfont \textsc{\h{\chinese{2023年}}}
+            \vfill
+        \end{center}
+    \end{minipage}
+    
+    \end{multicols*}
+    \end{landscape}
+    
+\end{document}
+
+%% SOURCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%- border - manually made by pgfornament & edited in GIMP
+%- ornament - don't remember, but probably not in the public domain
