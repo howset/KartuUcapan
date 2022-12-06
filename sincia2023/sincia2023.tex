@@ -14,7 +14,11 @@
 \usepackage{multicol}
     \setlength{\columnsep}{1cm}
 \usepackage{xcolor}
-    \definecolor{Yel}{HTML}{B1AA60}
+    %\definecolor{CapFonCol}{HTML}{B1AA60} %yellowgold
+    \definecolor{CapFonCol}{HTML}{B30000} %usual red
+    %\definecolor{FonCol}{HTML}{FFFFF0} %ivory
+    %\definecolor{FonCol}{HTML}{FFFFE0} %light yellow
+    %\definecolor{FonCol}{HTML}{FDF5E6} %old lace
 
 % content packages
 \usepackage{ebgaramond}
@@ -41,7 +45,7 @@
 \pgfpagesuselayout{christmas}
 
 \pagenumbering{gobble}
-\newcommand{\h}[1]{\textcolor{Yel}{#1}}
+\newcommand{\h}[1]{\textcolor{CapFonCol}{#1}}
 \setlength{\parindent}{0pt}
 
 \begin{document}
@@ -50,9 +54,10 @@
 
     %\ThisCenterWallPaper{0.95}{imgs/vecteezygr} %merah
     %\ThisCenterWallPaper{0.95}{imgs/vecteezyggr} %abu2
-    \ThisCenterWallPaper{0.95}{imgs/vecteezygb} %biru
+    %\ThisCenterWallPaper{0.95}{imgs/vecteezygb} %biru
     %\ThisCenterWallPaper{0.95}{imgs/vecteezygt} %turquoise
     %\ThisCenterWallPaper{0.95}{imgs/vecteezygtrans} %print version
+    \ThisCenterWallPaper{0.95}{imgs/vecteezyred} %old version
 
     \phantom{just a placeholder}
     \newpage\null\newpage
@@ -62,13 +67,14 @@
     \begin{landscape}
     %\ThisCenterWallPaper{0.95}{imgs/screegr} %merah
     %\ThisCenterWallPaper{0.95}{imgs/screeggr} %abu2
-    \ThisCenterWallPaper{0.95}{imgs/screegb} %biru
+    %\ThisCenterWallPaper{0.95}{imgs/screegb} %biru
     %\ThisCenterWallPaper{0.95}{imgs/screegt} %turquoise
     %\ThisCenterWallPaper{0.95}{imgs/screegw} %print version
+    \ThisCenterWallPaper{0.95}{imgs/screered} %old version
 
     \begin{multicols*}{2}
     \begin{minipage}{\linewidth}
-    \color{white}
+    %\color{FonCol}
     
     % title
     \begin{center}
@@ -95,7 +101,7 @@
     % signature
     \medskip
     \normalfont\initfamily
-    \fontsize{10mm}{10mm}\selectfont \h{MW} \hfill \h{HS}
+    %\fontsize{10mm}{10mm}\selectfont \h{MW} \hfill \h{HS}
     \end{minipage}
     
     \columnbreak
@@ -103,7 +109,7 @@
     \begin{minipage}{\linewidth}
         \vspace*{-0.5cm}
         \centering
-        \includegraphics[width=0.75\textwidth]{imgs/isto}
+        \includegraphics[width=0.75\textwidth]{imgs/istored}
         \newcommand{\chinese}[1]{\begin{CJK}{UTF8}{bsmi}#1\end{CJK}}
         \begin{center}
             \vspace*{-1cm}
