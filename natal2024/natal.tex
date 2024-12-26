@@ -1,0 +1,57 @@
+\documentclass[9pt]{article}
+\usepackage[a5paper,hmargin=3.5cm,vmargin=2.5cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{pgfornament}
+\usepackage{ebgaramond}
+\input GoudyIn.fd
+\newcommand*\initfamily{\usefont{U}{GoudyIn}{xl}{n}}
+\usepackage{wallpaper}
+\pagestyle{empty}
+\setlength\parindent{0pt}
+\setlength\parskip{4mm}
+\newcommand{\mono}[1]{{\tt\ifsmall\scriptsize\else\normalsize\fi #1}}
+\newcommand{\h}[1]{\textcolor{red!55!black}{#1}}
+
+%% ---
+\begin{document}
+
+% add wallpaper
+\CenterWallPaper{1}{rb_2151251772a}
+\mbox{}
+
+% title
+\begin{center}
+  \LARGE\ebgaramond
+  {\Huge {\textsc{\h{S}elamat \h{N}atal\\2024}}}\\[2pt]
+  \begin{tikzpicture}
+    \pgfornament[width = 2cm,color = red!55!black]{78}
+  \end{tikzpicture}
+\end{center}
+
+% body
+\large
+\smallskip
+
+\begin{center}
+Bersama ini kami,
+\end{center}
+\begin{center}
+\textsc{{\huge \h{M}}{\Large onica} {\huge \h{W}}{\Large idjasmara}}\\
+{\Large {\textsc{\h{\&}}}}\\
+\textsc{{\huge \h{H}}{\Large oward} {\huge \h{S}}{\Large etyamukti}}\\
+\end{center}
+\smallskip
+
+mengucapkan Selamat Natal 2024.
+Semoga penutupan tahun ini menuntun kita menyongsong tahun baru yang penuh sukacita, kebahagiaan, dan kedamaian.
+
+Salam damai,
+
+%signature
+\normalfont\initfamily
+\fontsize{12mm}{12mm}\selectfont \h{MW} \hfill \h{HS}
+
+\vfill
+
+\end{document}
