@@ -2,4 +2,4 @@
 
 ![](./ifitri.jpg)
 
-To greet people who celebrate islamic fasting 2022.
+To greet people who celebrate islamic fasting 2025.
