@@ -1,5 +1,5 @@
 # Lebaran 2022
 
-![](./ifitri.png)
+![](./ifitri.jpg)
 
 To greet people who celebrate islamic fasting 2022.
